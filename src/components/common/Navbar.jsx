@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { LayoutDashboard, FolderOpen, CheckSquare2, Menu, X, Sparkles } from 'lucide-react';
+import { LayoutDashboard, FolderOpen, CheckSquare2, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -53,9 +53,6 @@ const Navbar = () => {
                     isActive(path) ? 'animate-pulse' : 'group-hover:rotate-12'
                   }`} />
                   <span>{label}</span>
-                  {isActive(path) && (
-                    <Sparkles className="w-4 h-4 text-accent-400" />
-                  )}
                 </div>
               </Link>
             ))}
@@ -92,7 +89,6 @@ const Navbar = () => {
                   isActive(path) ? 'animate-bounce' : ''
                 }`} />
                 <span>{label}</span>
-                {isActive(path) && <Sparkles className="w-4 h-4 ml-auto text-accent-400" />}
               </Link>
             ))}
           </div>
